@@ -1,0 +1,14 @@
+CB/delta_w_units: &id001 electron_volt
+CB/j_units: ampere / mesh_unit ** 2
+IB/delta_w_units: *id001
+IB/j_units: ampere / mesh_unit ** 2
+VB/delta_w_units: *id001
+VB/j_units: ampere / mesh_unit ** 2
+b.namemixedqfl_base_w_units: *id001
+dolfin_version: 2019.2.0.dev0
+filename: out/Mar31/a/HMA_checkpoint_V=1.2.xdmf
+parameter: '1.2'
+poisson/E_units: volt / mesh_unit
+poisson/phi_units: &id002 volt
+step_size: '0.01143829473709105'
+thermal_equilibrium_phi_units: *id002

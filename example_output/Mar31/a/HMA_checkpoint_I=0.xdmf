@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+        <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:/Mesh/mesh/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XY">
+        <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:/Mesh/mesh/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="poisson/phi">
+      <Grid Name="poisson/phi_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="1" ElementCell="triangle" Name="poisson/phi" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="972 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="972 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/phi/poisson/phi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="poisson/E">
+      <Grid Name="poisson/E_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="BDM" ElementDegree="2" ElementCell="triangle" Name="poisson/E" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="3888 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/cell_dofs</DataItem>
+          <DataItem Dimensions="2919 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:poisson/E/poisson/E_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="CB/delta_w">
+      <Grid Name="CB/delta_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="1" ElementCell="triangle" Name="CB/delta_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="972 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="972 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/delta_w/CB/delta_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="CB/j">
+      <Grid Name="CB/j_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="BDM" ElementDegree="2" ElementCell="triangle" Name="CB/j" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="3888 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/cell_dofs</DataItem>
+          <DataItem Dimensions="2919 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/j/CB/j_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="IB/delta_w">
+      <Grid Name="IB/delta_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="1" ElementCell="triangle" Name="IB/delta_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="972 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="972 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/delta_w/IB/delta_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="IB/j">
+      <Grid Name="IB/j_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="BDM" ElementDegree="2" ElementCell="triangle" Name="IB/j" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="3888 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/cell_dofs</DataItem>
+          <DataItem Dimensions="2919 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/j/IB/j_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="VB/delta_w">
+      <Grid Name="VB/delta_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="1" ElementCell="triangle" Name="VB/delta_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="972 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="972 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/delta_w/VB/delta_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="VB/j">
+      <Grid Name="VB/j_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="BDM" ElementDegree="2" ElementCell="triangle" Name="VB/j" Center="Other" AttributeType="Vector">
+          <DataItem Dimensions="3888 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/cell_dofs</DataItem>
+          <DataItem Dimensions="2919 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/j/VB/j_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="CB/mixedqfl_base_w">
+      <Grid Name="CB/mixedqfl_base_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="0" ElementCell="triangle" Name="CB/mixedqfl_base_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:CB/mixedqfl_base_w/CB/mixedqfl_base_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="IB/mixedqfl_base_w">
+      <Grid Name="IB/mixedqfl_base_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="0" ElementCell="triangle" Name="IB/mixedqfl_base_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:IB/mixedqfl_base_w/IB/mixedqfl_base_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="VB/mixedqfl_base_w">
+      <Grid Name="VB/mixedqfl_base_w_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="0" ElementCell="triangle" Name="VB/mixedqfl_base_w" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:VB/mixedqfl_base_w/VB/mixedqfl_base_w_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid GridType="Collection" CollectionType="Temporal" Name="thermal_equilibrium_phi">
+      <Grid Name="thermal_equilibrium_phi_0" GridType="Uniform">
+        <Topology NumberOfElements="324" TopologyType="Triangle" NodesPerElement="3">
+          <DataItem Dimensions="324 3" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/mesh/topology</DataItem>
+        </Topology>
+        <Geometry GeometryType="XY">
+          <DataItem Dimensions="326 2" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/mesh/geometry</DataItem>
+        </Geometry>
+        <Time Value="0.000000000000000e+00" />
+        <Attribute ItemType="FiniteElementFunction" ElementFamily="DG" ElementDegree="2" ElementCell="triangle" Name="thermal_equilibrium_phi" Center="Other" AttributeType="Scalar">
+          <DataItem Dimensions="1944 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/cell_dofs</DataItem>
+          <DataItem Dimensions="1944 1" NumberType="Float" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/vector</DataItem>
+          <DataItem Dimensions="325 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/x_cell_dofs</DataItem>
+          <DataItem Dimensions="324 1" NumberType="UInt" Format="HDF">HMA_checkpoint_I=0.h5:thermal_equilibrium_phi/thermal_equilibrium_phi_0/cells</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

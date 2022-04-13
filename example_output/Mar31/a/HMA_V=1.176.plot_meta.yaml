@@ -1,0 +1,18 @@
+sweep_parameter:V:
+  value: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - &id001 null
+    - *id001
+    - *id001
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    N4lBYOXQ8j8=
