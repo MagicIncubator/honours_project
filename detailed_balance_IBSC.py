@@ -36,8 +36,11 @@ def main():
     #eG =    1.9886288598286463
     #eI =    0.7286495007361697
     #eC =    1.2599793590924766
-    print('Options:\n 1. Find global maxima\n 2. Reproduce Fig. 2 from the Luque & Martì paper\n 3. Perform both options 1 & 2\n')
+    print('Options:\n 1. Find global maxima\n 2. Reproduce Fig. 2 from the Luque & Martì paper\n 3. Perform both options 1 & 2\n 4. Exit\n')
     option = str(input('Enter "1", "2" or "3" \n>>> '))
+    
+    if option == '4':
+        return
 
     if option != '1' and option != '2' and option != '3':
         print(f'{option} is not a valid input. Program terminating now.')
@@ -105,7 +108,7 @@ def main():
             return 0.49*eG - eI # this constrains eI to the range [0, 0.49*eG]. When eI gets too close to eG/2, things get weird.
 
         ### Finding optimal eG & eI for given eI (this is to recreate fig 2 from Luque & Marti)
-        eIs = np.linspace(0.1, 0.5, 10) # the values of eI explicitly plotted in the Luque & Marti paper fig 2
+        eIs = np.linspace(0.5, 1.3, 9) # the values of eI explicitly plotted in the Luque & Marti paper fig 2
         initial_eGs = eIs * 2.1        # the starting guess values of eG
         opt_eGs = [optimize.minimize(optimise_eG, i, args = (j, eM,), constraints = {'type': 'ineq', 'fun': prob_constraints2, 'args': (j, eM,)}, method = 'COBYLA', tol = 1e-9 ).x for i,j in zip(initial_eGs, eIs) ]
         opt_mu_CV = [optimise_muCV(i, j, eM) for i,j in zip(opt_eGs, eIs)]
@@ -157,7 +160,7 @@ def main():
         plt.xlabel(r'$\epsilon_i$')
         #plt.title(r'$\epsilon_g=$'+f'{ideal_eG:.3} eV,  ' r'$\epsilon_i=$' +f'{ideal_eI:.3} eV, '+ r'$\mu_{CV}=$'+f'{ideal_mu_CV:.3} eV')
         plt.ylabel('Efficiency')
-        plt.legend(fontsize = 12)
+        #plt.legend(fontsize = 12)
         plt.savefig(f'Luque&Marti_Fig2_efficiency.png')
         plt.grid()
         plt.show()
